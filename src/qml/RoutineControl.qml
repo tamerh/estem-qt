@@ -173,6 +173,11 @@ Item {
                 id: resumeButton
                 text: "Resume"
                 visible: false
+                onClicked: {
+                    console.log("Routine UI: resume requested")
+                    RoutineController.resume()
+                    resumeButton.visible = false
+                }
             }
             Button {
                 id: stopButton
@@ -428,15 +433,6 @@ DSM.StateMachine {
             stopAndPauseButtons.visible = true
             pauseButton.visible = false
             resumeButton.visible = true
-        }
-
-        Connections {
-            target: resumeButton
-            onClicked: {
-                console.log("Routine UI: resume requested")
-                RoutineController.resume()
-                resumeButton.visible = false
-            }
         }
 
         DSM.SignalTransition {

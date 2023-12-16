@@ -85,6 +85,7 @@ void Communicator::setPressure(uint controllerNumber, double pressure)
         qWarning() << "Pressure invalid. Must be between 0 and 1.";
         return;
     }
+
     uint8_t sp = pressure*PR_MAX_VALUE;
 
     QByteArray message;

@@ -46,12 +46,22 @@ void SerialCommunicator::connect()
 
         qDebug().noquote() << s;
 
-        // The following line may need to be customized depending on your specific ESP32 board.
+        // The following line may need to be customized depending on your specific board.
+
         if((info.description().contains("UART Bridge") || info.description().contains("USB Serial Port")
-            || info.description().contains("FT231X") || info.manufacturer().contains("Silicon Labs")) && !info.isBusy()) {
+             || info.description().contains("FT231X") || info.manufacturer().contains("Silicon Labs")) && !info.isBusy()) {
             portToUse = info;
             break;
         }
+
+        /**
+        if((info.portName().contains("ttyACM0") || info.manufacturer().contains("Arduino")) && !info.isBusy()) {
+            portToUse = info;
+            //break;
+        }
+        */
+
+
     }
 
     if(portToUse.isNull()) {
@@ -137,7 +147,6 @@ void SerialCommunicator::sendMessage(QByteArray message)
 {
     if (mConnectionStatus == Disconnected)
         qWarning() << "Can't send message: microcontroller is not connected";
-
     else if (mSerialPort)
         mSerialPort->write(message);
 }

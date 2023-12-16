@@ -17,7 +17,7 @@ typedef unsigned char uint8_t;
 #define PR2_MIN_PRESSURE 0
 #define PR3_MIN_PRESSURE -14
 
-#define PR1_MAX_PRESSURE 29.5 // For control layer valves
+#define PR1_MAX_PRESSURE 14 // For control layer valves
 #define PR2_MAX_PRESSURE 4.8 // Flow layer valves
 #define PR3_MAX_PRESSURE 14
 

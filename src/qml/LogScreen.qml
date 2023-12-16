@@ -24,6 +24,9 @@ Item {
             ScrollBar.vertical: ScrollBar {}
 
             delegate: Rectangle {
+                Component.onCompleted: {
+                       width = parent.width;
+                }
                 height: messageText.contentHeight
                 width: parent.width
                 color: "transparent"
