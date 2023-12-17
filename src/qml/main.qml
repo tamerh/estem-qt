@@ -19,6 +19,11 @@ ApplicationWindow {
     onWidthChanged: Backend.windowWidth = width
     onHeightChanged: Backend.windowHeight = height
 
+    Shortcut {
+        sequence: "Ctrl+W"
+        onActivated: Qt.quit()
+    }
+
     SwipeView {
         id: swipeView
         anchors.fill: parent

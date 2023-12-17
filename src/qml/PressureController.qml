@@ -102,6 +102,7 @@ Item {
         }
     }
     Component.onCompleted: {
+        //helper.setPointInPsi = 0; // TODO I added this and it is not looking right
         Backend.registerPCHelper(controllerNumber, helper)
     }
 }

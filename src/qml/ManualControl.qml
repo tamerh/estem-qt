@@ -52,30 +52,6 @@ Item {
                 ValveSwitch { valveNumber: 6 }
                 ValveSwitch { valveNumber: 7 }
                 ValveSwitch { valveNumber: 8 }
-                ValveSwitch { valveNumber: 9 }
-                ValveSwitch { valveNumber: 10 }
-                ValveSwitch { valveNumber: 11 }
-                ValveSwitch { valveNumber: 12 }
-                ValveSwitch { valveNumber: 13 }
-                ValveSwitch { valveNumber: 14 }
-                ValveSwitch { valveNumber: 15 }
-                ValveSwitch { valveNumber: 16 }
-                ValveSwitch { valveNumber: 17 }
-                ValveSwitch { valveNumber: 18 }
-                ValveSwitch { valveNumber: 19 }
-                ValveSwitch { valveNumber: 20 }
-                ValveSwitch { valveNumber: 21 }
-                ValveSwitch { valveNumber: 22 }
-                ValveSwitch { valveNumber: 23 }
-                ValveSwitch { valveNumber: 24 }
-                ValveSwitch { valveNumber: 25 }
-                ValveSwitch { valveNumber: 26 }
-                ValveSwitch { valveNumber: 27 }
-                ValveSwitch { valveNumber: 28 }
-                ValveSwitch { valveNumber: 29 }
-                ValveSwitch { valveNumber: 30 }
-                ValveSwitch { valveNumber: 31 }
-                ValveSwitch { valveNumber: 32 }
             }
 
             Column {
@@ -98,10 +74,11 @@ Item {
                     anchors.right: parent.right
                     rowSpacing: 20
 
+
                     Column {
                         Layout.fillWidth: true
                         Layout.alignment: Qt.AlignTop
-
+                        
                         Label {
                             text: qsTr("Control layer")
                             font.pointSize: Style.heading2.fontSize
@@ -110,7 +87,7 @@ Item {
                         PressureController {
                             controllerNumber: 1
                             minPressure: 0
-                            maxPressure: 29.5
+                            maxPressure: 14
                         }
                     }
 
@@ -130,9 +107,10 @@ Item {
                         }
                     }
 
-                    Column {
+                     Column {
                         Layout.fillWidth: true
                         Layout.alignment: Qt.AlignTop
+                        visible: false
 
                         Label {
                             text: qsTr("Pumps")
@@ -142,7 +120,7 @@ Item {
 
                         PumpSwitch { pumpNumber: 1 }
                         PumpSwitch { pumpNumber: 2 }
-                    }
+                    }  
                 }
 
 
