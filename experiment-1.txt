@@ -1,0 +1,8 @@
+# Example experiment.
+valve 1 open
+valve 2 close
+pressure 1 1.5
+wait 1 minute
+valve 1 close
+wait 10 sec 
+valve 2 open

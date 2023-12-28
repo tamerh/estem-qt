@@ -213,8 +213,8 @@ DSM.StateMachine {
         id: noFileLoaded
         onEntered: {
             console.log("Routine UI: Entered state 'noFileLoaded'")
-            title.text = "Load routine"
-            description.text = "Choose a file to run"
+            title.text = "Load experiment"
+            description.text = "Choose a experiment file to run"
             browseButton.visible = true
         }
 
@@ -263,8 +263,8 @@ DSM.StateMachine {
 
         onEntered: {
             console.log("Routine UI: Entered state 'routineLoadedSuccessfully'")
-            title.text = "Routine loaded"
-            description.text = "The routine was loaded successfully. Click below to launch it."
+            title.text = "Experiment loaded"
+            description.text = "The experiment was loaded successfully. Click below to launch it."
             totalRunTime.visible = true
             listViewBackground.visible = true
             stepsList.visible = true

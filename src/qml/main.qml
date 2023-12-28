@@ -51,11 +51,11 @@ ApplicationWindow {
         currentIndex: swipeView.currentIndex
 
         TabButton {
-            text: qsTr("Manual control")
+            text: qsTr("Manual Experiment")
         }
 
         TabButton {
-            text: qsTr("Routines")
+            text: qsTr("Auto Experiment")
         }
 
         TabButton {
@@ -71,7 +71,7 @@ ApplicationWindow {
 
     Component {
         id: graphicalControlTab
-        TabButton { text: "Graphical control" }
+        TabButton { text: "Graphical experiment" }
     }
 
     Component {
