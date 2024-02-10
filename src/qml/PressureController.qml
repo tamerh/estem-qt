@@ -34,7 +34,7 @@ Item {
             id: slider
             orientation: Qt.Vertical
             live: true
-            stepSize: 1./256.
+            stepSize: 0.001
             background.implicitHeight: control.sliderHeight
 
             onMoved: {
