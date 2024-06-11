@@ -75,21 +75,21 @@ Item {
                     rowSpacing: 20
 
 
-                    Column {
-                        Layout.fillWidth: true
-                        Layout.alignment: Qt.AlignTop
+//                    Column {
+//                        Layout.fillWidth: true
+//                        Layout.alignment: Qt.AlignTop
                         
-                        Label {
-                            text: qsTr("Control layer")
-                            font.pointSize: Style.heading2.fontSize
-                        }
+//                        Label {
+//                            text: qsTr("Control layer")
+//                            font.pointSize: Style.heading2.fontSize
+//                        }
 
-                        PressureController {
-                            controllerNumber: 1
-                            minPressure: 0
-                            maxPressure: 14
-                        }
-                    }
+//                        PressureController {
+//                            controllerNumber: 1
+//                            minPressure: 0
+//                            maxPressure: 14
+//                        }
+//                    }
 
                     Column {
                         Layout.fillWidth: true
@@ -103,7 +103,7 @@ Item {
                         PressureController {
                             controllerNumber: 2
                             minPressure: 0
-                            maxPressure: 4.8
+                            maxPressure: 1
                         }
                     }
 

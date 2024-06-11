@@ -313,6 +313,10 @@ void Communicator::handleCommand(uint8_t command, QList<QByteArray> parameters)
                 uint8_t sp = parameters[1][0];
                 uint8_t pv = parameters[2][0];
 
+                if (number == 2){
+                    qDebug() << "Flow layer pressure setpoint vs measured"  << double(sp)/PR_MAX_VALUE << "\t" << double(pv)/PR_MAX_VALUE;
+                }
+
                 emit pressureSetpointChanged(number, double(sp)/PR_MAX_VALUE);
                 emit pressureChanged(number, double(pv)/PR_MAX_VALUE);
             }

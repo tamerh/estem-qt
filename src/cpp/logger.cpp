@@ -65,8 +65,10 @@ void Logger::messageHandler(QtMsgType type, const QMessageLogContext &context, c
     // Logs are stored in a fragmented way to make rich markup easier in QML.
     // Date is omitted since not particularly useful within the app
     QStringList toAdd;
-    toAdd << time << messageType << message;
-    emit logger()->newLogForGUI(toAdd);
+    if(type == QtCriticalMsg || type == QtFatalMsg || type == QtWarningMsg || type == QtInfoMsg){
+        toAdd << time << messageType << message;
+        emit logger()->newLogForGUI(toAdd);
+    }
 
 }
 
