@@ -85,7 +85,7 @@ Item {
 //                        }
 
 //                        PressureController {
-//                            controllerNumber: 1
+//                            controllerNumber: 2
 //                            minPressure: 0
 //                            maxPressure: 14
 //                        }
@@ -101,7 +101,7 @@ Item {
                         }
 
                         PressureController {
-                            controllerNumber: 2
+                            controllerNumber: 1
                             minPressure: 0
                             maxPressure: 1
                         }

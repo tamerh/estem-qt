@@ -1,0 +1,4 @@
+# Example experiment.
+pressure 1 0.011811
+wait 2 minute
+pressure 1 0
